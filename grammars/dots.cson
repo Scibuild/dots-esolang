@@ -1,3 +1,50 @@
 'scopeName': 'source.dots'
 'name': 'Dots'
 'fileTypes': ['dots']
+
+'patterns': [
+  {
+    'match': '/[.&]/g'
+    'name':'symbol.startstop'
+  },
+  {
+    'match':'/#/g'
+    'name':'symbol.setvalue'
+  },
+  {
+    'match':'/($[_#a]{0,3})|([#@]?)/g'
+    'name':'symbol.console'
+  },
+  {
+    'match': '/[-\/\\\-+]/g'
+    'name':'path.simple'
+  },
+  {
+    'match': '/[><\^v*~!]/g'
+    'name':'path.complex'
+  },
+  {
+    'match': '/[\\[{][*/÷+\\-%^&!ox>≥<≤=≠][\\]}]'
+    'name':'operator'
+  },
+  {
+    'match':'/".*"|\'.*\''
+    'name':'value.string'
+  },
+  {
+    'match':'/[0-9]*'
+    'name':'value.number'
+  },
+  {
+    'match':'/``.*'
+    'name':'comment'
+  },
+  {
+    'match':'/%$[b-zA-Z^v]'
+    'name':'top.warp'
+  },
+  {
+    'match':'/%!.* [b-zA-Z^v]'
+    'name':'top.library'
+  }
+]
