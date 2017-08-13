@@ -4,47 +4,55 @@
 
 'patterns': [
   {
-    'match': '/[.&]/g'
-    'name':'symbol.startstop'
+    'match': '[.&]'
+    'name':'dots.startstop'
   },
   {
-    'match':'/#/g'
-    'name':'symbol.setvalue'
+    'match':'[#@]'
+    'name':'dots.setvalue'
   },
   {
-    'match':'/($[_#a]{0,3})|([#@]?)/g'
-    'name':'symbol.console'
+    'match':'\\$[_#a]{0,3}'
+    'name':'dots.console-print'
   },
   {
-    'match': '/[-\/\\\-+]/g'
-    'name':'path.simple'
+    'match':'[#@]\\?'
+    'name':'dots.console-read'
   },
   {
-    'match': '/[><\^v*~!]/g'
-    'name':'path.complex'
+    'match': '[-\\/\\\\+\\-]'
+    'name':'dots.pathsimple'
   },
   {
-    'match': '/[\\[{][*/÷+\\-%^&!ox>≥<≤=≠][\\]}]'
-    'name':'operator'
+    'match': '[><\\^v\\*~!]'
+    'name':'dots.pathcomplex'
   },
   {
-    'match':'/".*"|\'.*\''
-    'name':'value.string'
+    'match': '[\\[{][\\*/÷+\\-%\\^&!ox>≥<≤=≠][\\]}]'
+    'name':'dots.operator'
   },
   {
-    'match':'/[0-9]*'
-    'name':'value.number'
+    'match':"'.*'"
+    'name':'dots.string'
   },
   {
-    'match':'/``.*'
-    'name':'comment'
+    'match':"`{2,}.*"
+    'name':'dots.comment'
   },
   {
-    'match':'/%$[b-zA-Z^v]'
-    'name':'top.warp'
+    'match':'".*"'
+    'name':'dots.string'
   },
   {
-    'match':'/%!.* [b-zA-Z^v]'
-    'name':'top.library'
+    'match':'[0-9]{1,}'
+    'name':'dots.number'
+  },
+  {
+    'match':'%\\$[b-uw-zA-Z]'
+    'name':'dots.warp'
+  },
+  {
+    'match':'%!\\S{1,} [b-uw-zA-Z]'
+    'name':'dots.library'
   }
 ]
