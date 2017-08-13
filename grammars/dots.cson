@@ -20,7 +20,7 @@
     'name':'dots.console-read'
   },
   {
-    'match': '[-\\/\\\\+\\-]'
+    'match': '[-\\/\\\\+\\-|]'
     'name':'dots.pathsimple'
   },
   {
