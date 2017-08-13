@@ -1,8 +1,8 @@
 {
   "name": "dots-esolang",
-  "main": "./lib/dots-esolang",
-  "version": "0.0.1",
-  "description": "Adds support for the esolang Dots",
+  "main": "./grammars/dots.cson",
+  "version": "0.0.0",
+  "description": "Adds a grammar for the esolang Dots",
   "keywords": [
   ],
   "activationCommands": {

@@ -8,7 +8,7 @@
     'name':'dots.startstop'
   },
   {
-    'match':'[#@]?{0,1}'
+    'match':'[#@]\\?{0,1}'
     'name':'dots.setvalue'
   },
   {
